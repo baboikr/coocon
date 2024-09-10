@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>쿠콘닷넷</title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no">
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href="../img/favicon.ico">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/content.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>	
+	<body>
+		<div class="wrap">
+			<!--header-->
+			<div class="header">
+				<div class="header_inner">
+					<div class="header_left">
+						<h1><a href="#none"><img src="../img/comm/logo.png" alt="coocon"></a></h1>
+						<ul class="nav">
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>상품</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>API 상품</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>빅데이터 상품</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>고객사례</span></label></a></dt>
+									<dd><a href="#none"><label for="nav_switch"><span>고객 인터뷰</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>활용사례</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품 가입현황</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>쿠콘소식</span></label></a></dt>
+									<dd class=""><a href="#none"><label for="nav_switch"><span>공지사항</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품소식</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>뉴스룸</span></label></a></dd>
+									<dd><a href="#none" target="_blank"><label for="nav_switch"><span>회사소개</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt class="on"><a href="#none"><label for="nav_switch"><span>고객지원</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>고객문의</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>FAQ</span></label></a></dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<ul class="right_list">
+						<li><a href="#none">RECRUIT</a></li>
+						<li><a href="#none">ENG</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$(document).click(function(){
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							} else {
+								$header.removeClass('active');
+							}
+							$('.nav li dd').fadeOut();
+							$('.footer_nav > ul > li').removeClass('on');
+							$('.family_site_list dd').fadeOut(function() {
+								$('.family_site_list dt a').removeClass('on');
+							});
+						});
+						const $sectionWrap = $('.section_wrap');
+						const $header = $('.header');// Reference to the checkbox
+						const scrollOffset = 83; // Distance in pixels to trigger the class toggle
+
+						// Function to toggle the 'active' class based on scroll position within section_wrap
+						function toggleScrolledClass() {
+							
+
+							// Otherwise, toggle the 'active' class based on scroll position
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+								$('.quick_menu_list a.go_top').fadeIn()
+							} else {
+								$header.removeClass('active');
+								$('.quick_menu_list a.go_top').fadeOut()
+							}
+						}
+
+						// Initialize the state on page load
+						toggleScrolledClass();
+
+						// Attach scroll event listener to section_wrap
+						$sectionWrap.on('scroll', function() {
+							toggleScrolledClass();
+						});
+
+						$('.nav li dt').on('click', function(event){
+							event.stopPropagation();
+							$header.toggleClass('active');
+							$('.nav li dd').fadeToggle();
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							}
+						});
+						
+						$('.family_site_list dt a').on('click', function(event){
+							event.stopPropagation();
+							$('.family_site_list dd').slideToggle(function() {
+								$('.family_site_list dt a').toggleClass('on');
+							});
+						});
+						$('.footer_nav > ul > li a').on('click', function(event){
+							event.stopPropagation();
+							$(this).parent('li').toggleClass('on');
+						});
+						$('.quick_menu_list a.go_top').on('click', function(event) {
+							// Animate scroll to top
+							$('.section_wrap').animate({ scrollTop: 0 }, 'smooth');
+						});
+					});
+				</script>
+			</div>
+			<!--//header-->
+
+			<!--section_wrap-->
+			<div class="section_wrap">
+				<!--product_search-->
+				<div class="section product_search">
+					<div class="section_inner">
+						<!--title-->
+						<div class="mgt43">
+							<h2 class="tit_h2">문의내역</strong></h2>
+						</div>
+						<!--//title-->
+
+						<!--search box-->
+						<div class="search_box mgt30">
+							<div class="search_bar">
+								<input type="text" name="" id="" placeholder="회사명을 입력하세요">
+								<a href="#none" class="clear"><span class="blind">clear</span></a>
+								<a href="#none" class="btn_search"><span class="blind">Search</span></a>
+							</div>
+							<p class="search_guide mgt10">내가 쓴 1:1 문의내용에 대한 답변을 확인하실 수 있습니다.</p>
+							<p class="term">※ 문의하기 게시판은 상품/제휴/장애 문의를 위해 이용되며, 해당되지 않는 게시물은 관리자에 의해 삭제될 수 있습니다.</p>
+						</div>
+						<!--//search box-->
+						<div class="btn_wrap mgt20">
+							<a href="" class="btn_blue_01 ask">문의하기</a>
+						</div>
+					</div>
+				</div>
+				<!--//product_search-->
+
+				<!--product search result-->
+				<div class="section qna_wrap">
+					<div class="section_inner">
+						<!-- Q&A -->
+						<div class="qna">
+							<div class="search_box_mini">
+								<div class="search_bar"><input type="text" placeholder="검색어를 입력하세요"><a href="#none" class="btn_search">검색</a></div>
+							</div>
+							<table summary="">
+								<caption></caption>
+								<colgroup>
+								<col style="width:121px;">
+								<col style="width:152px;">
+								<col style="width:260px;">
+								<col>
+								<col style="width:140px;">
+								<col style="width:170px;">
+								<col style="width:69px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><div><span>번호</span></div></th>
+										<th scope="col"><div><span>문의유형</span></div></th>
+										<th scope="col"><div><span>문의상품</span></div></th>
+										<th scope="col"><div><span>제목</span></div></th>
+										<th scope="col"><div><span>답변상태</span></div></th>
+										<th scope="col"><div><span>문의일</span></div></th>
+										<th scope="col"><div><span></span></div></th>
+									</tr>
+								</thead>
+								<!-- [D]등록된내용이없을때 -->
+								<tfoot style="display:;">
+									<tr>
+										<td colspan="7">
+											<div class="no_result">
+												<span class=""></span>
+												<strong>검색 결과가 없어요</strong>
+												<p>검색어를 확인하고 다시 검색해 보세요.</p>
+											</div>
+										</td>
+									</tr>
+								</tfoot>
+								<!-- //[D]등록된내용이없을때 -->
+								<tbody class="">
+									<tr>
+										<td><div><span class="qna_num">1191</span></div></td>
+										<td><div><span class="qna_type">개발적용</span></div></td>
+										<td><div><span class="locked tal">비밀글</span></div></td>
+										<td><div class="new"><p>2022년도 사업보고서 및 감사보고서(연결, 별도) 제출 공고</p></div></td>
+										<td><div><span class="status on">답변완료</span></div></td>
+										<td><div><span>2022.06.14</span></div></td>
+										<td><div><span></span></div></td>
+									</tr>
+									<tr>
+										<td colspan="7">
+											<div class="pwd_confirmation" style="display:;">
+												<p>
+													비밀글은 작성자와 관리자만 열람할 수 있습니다<br>
+													게시글 작성 시 설정한 비밀번호를 입력해주세요
+												</p>
+												<div class="pwd_input mgt24">
+													<input type="text" placeholder="비밀번호를 압력하세요"><a href="#none">확인</a>
+													<p class="warning" style="display:;">* 비밀번호가 일치하지 않습니다</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><div><span class="qna_num">1190</span></div></td>
+										<td><div><span class="qna_type">상품문의</span></div></td>
+										<td><div><span class="tal">e커머스 매출내역 조회</span></div></td>
+										<td><div><p>안녕하십니까.내보험다보여 API를 이용하고자 하여 이</p></div></td>
+										<td><div><span class="status on">답변대기</span></div></td>
+										<td><div><span>2022.06.14</span></div></td>
+										<td><div><span></span></div></td>
+									</tr>
+									<tr>
+										<td colspan="7">
+											<dl class="qna_content" style="display: none;">
+												<dt>
+													<div class="question">
+														<p>사용자의 건강검진 결과 정보, 진료/투약 이력 정보를 수집하고자 합니다.</p>
+														<p>문의 드리고 싶은 내용은 검색을 해보니 '헬스케어 패키지'와 개인정보 API의 '진료내역 조회'에 같은 내용이 있는데 헬스케어 패키지가 비용적으로나 성능적으로 더 나은 조건인지 문의 드립니다.</p>
+														<p>감사합니다.</p>
+													</div>
+												</dt>
+												<dd>
+													<div class="answer">
+														<p>
+															안녕하세요.<br>
+															쿠콘 전자금융2BU입니다.
+														</p>
+														<p>
+															우선 쿠콘 상품에 관심가지고 문의주셔서 감사드립니다.<br>
+															먼저 [헬스케어 패키지] 상품에 대해 안내드립니다.
+														</p>
+													</div>
+												</dd>
+											</dl>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--//Q&A-->
+
+						<!--pagination-->
+						<div class="pagination mgt48">
+							<a href="#none" class="previous"><span class="blind">Previous</span></a>
+							<ol>
+								<li class="on"><a href="#none">1</a></li>
+								<li><a href="#none">2</a></li>
+								<li><a href="#none">3</a></li>
+								<li><a href="#none">4</a></li>
+								<li><a href="#none">5</a></li>
+								<li><a href="#none">6</a></li>
+								<li><a href="#none">7</a></li>
+								<li><a href="#none">8</a></li>
+								<li><a href="#none">9</a></li>
+								<li><a href="#none">10</a></li>
+							</ol>
+							<a href="#none" class="next"><span class="blind">Next</span></a>
+						</div>
+						<!--//pagination-->
+					</div>
+				</div>
+				<!--//product search result-->
+
+				<!--footer-->
+				<div class="footer">
+					<div class="footer_inner">
+						<div class="footer_left mgt30">
+							<div class="footer_nav">
+								<ul>
+									<li>
+										<a href="#none">서비스 이용약관<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 이용약관</a></li>
+											<li><a href="#none">체크페이 이용약관</a></li>
+											<li><a href="#none">간편결제 서비스 이용약관</a></li>
+											<li><a href="#none">전자금융거래 이용약관</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#none" class="strong">개인정보처리방침<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 개인정보처리방침</a></li>
+											<li><a href="#none">체크페이 개인정보처리방침</a></li>
+											<li><a href="#none">간편결제서비스 개인정보처리방침</a></li>
+											<li><a href="#none">전자금융거래 개인정보처리방침</a></li>
+											<li><a href="#none">내게맞는대출비교 개인정보처리방침</a></li>
+											<li><a href="#none">We-Chceck 개인정보처리방침</a></li>
+										</ul>
+									</li>
+									<li><a href="#none">금융소비자 보호체계</a></li>
+									<li><a href="#none">기업윤리</a></li>
+								</ul>
+							</div>
+							<div class="copyright mgt40">
+								<dl class="contact_list">
+									<dt>T.</dt>
+									<dd>1522-1904</dd>
+									<dt>T.</dt>
+									<dd>02-3779-9199</dd>
+									<dt>E.</dt>
+									<dd>biz@coocon.net</dd>
+								</dl>
+								<ul class="address">
+									<li>(주)쿠콘</li>
+									<li>대표자 : 김종현</li>
+									<li>사업자등록번호 : 107-86-85702</li>
+									<li>서울특별시 영등포구 영신로 220 KnK디지털타워 19층</li>
+								</ul>
+								<p>본 사이트의 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복사, 배포 등을 금합니다. <span>© COOCON Corp. All rights reserved</span></p>
+							</div>
+						</div>
+						<div class="footer_right mgt40">
+							<div class="site_link">
+								<a href="#none" class="blog"><img src="../img/ic/ic_blog.png" alt=""></a>
+								<dl class="family_site_list">
+									<dt><a href="#none">Family Site</a></dt>
+									<dd style="display: none;">
+										<ul>
+											<li><a href="#none">(주)쿠콘</a></li>
+											<li><a href="#none">쿠콘 데이터전문기관</a></li>
+											<li><a href="#none">체크페이</a></li>
+											<li><a href="#none">내게 맞는 대출비교</a></li>
+										</ul>
+										<ul>
+											<li><a href="#none">(주)웹케시</a></li>
+											<li><a href="#none">(주)웹케시글로벌</a></li>
+											<li><a href="#none">(주)비즈플레이</a></li>
+											<li><a href="#none">(주)비플페이</a></li>
+											<li><a href="#none">마드라스체크(주)</a></li>
+											<li><a href="#none">로움아이티(주)</a></li>
+											<li><a href="#none">KOSIGN</a></li>
+											<li><a href="#none">웹케시제뉴윈</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<dl class="isms mgt60">
+								<dt><img src="../img/comm/authMark_ISMS.png" alt=""></dt>
+								<dd>
+									<p>
+										인증범위 체크페이 및 쿠콘닷넷 서비스<br>
+										유효기간 2020.12.01 ~ 2023.11.30
+									</p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--//footer-->
+				
+				<!--quick menu-->
+				<ul class="quick_menu_list">
+					<li><a href="#none" class="history">히스토리</a></li>
+					<li><a href="#none" class="ask">간편문의</a></li>
+					<li><a href="#none" class="go_top" style="display:none"><span class="blind">Go to Top</span></a></li>
+				</ul>
+				<!--//quick menu-->
+			</div>
+			<!--//section_wrap-->	
+		</div>
+	</body>
+</html>

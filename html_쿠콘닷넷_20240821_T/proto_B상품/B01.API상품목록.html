@@ -1,0 +1,716 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>쿠콘닷넷</title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no">
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href="../img/favicon.ico">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/content.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>	
+	<body>
+		<div class="wrap">
+			<!--header-->
+			<div class="header">
+				<div class="header_inner">
+					<div class="header_left">
+						<h1><a href="#none"><img src="../img/comm/logo.png" alt="coocon"></a></h1>
+						<ul class="nav">
+							<li>
+								<dl>
+									<dt class="on"><a href="#none"><label for="nav_switch"><span>상품</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>API 상품</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>빅데이터 상품</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>고객사례</span></label></a></dt>
+									<dd><a href="#none"><label for="nav_switch"><span>고객 인터뷰</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>활용사례</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품 가입현황</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>쿠콘소식</span></label></a></dt>
+									<dd class=""><a href="#none"><label for="nav_switch"><span>공지사항</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품소식</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>뉴스룸</span></label></a></dd>
+									<dd><a href="#none" target="_blank"><label for="nav_switch"><span>회사소개</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>고객지원</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>고객문의</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>FAQ</span></label></a></dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<ul class="right_list">
+						<li><a href="#none">RECRUIT</a></li>
+						<li><a href="#none">ENG</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$(document).click(function(){
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							} else {
+								$header.removeClass('active');
+							}
+							$('.nav li dd').fadeOut();
+							$('.footer_nav > ul > li').removeClass('on');
+							$('.family_site_list dd').fadeOut(function() {
+								$('.family_site_list dt a').removeClass('on');
+							});
+						});
+						const $sectionWrap = $('.section_wrap');
+						const $header = $('.header');// Reference to the checkbox
+						const scrollOffset = 83; // Distance in pixels to trigger the class toggle
+
+						// Function to toggle the 'active' class based on scroll position within section_wrap
+						function toggleScrolledClass() {
+							
+
+							// Otherwise, toggle the 'active' class based on scroll position
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+								$('.quick_menu_list a.go_top').fadeIn()
+							} else {
+								$header.removeClass('active');
+								$('.quick_menu_list a.go_top').fadeOut()
+							}
+						}
+
+						// Initialize the state on page load
+						toggleScrolledClass();
+
+						// Attach scroll event listener to section_wrap
+						$sectionWrap.on('scroll', function() {
+							toggleScrolledClass();
+						});
+
+						$('.nav li dt').on('click', function(event){
+							event.stopPropagation();
+							$header.toggleClass('active');
+							$('.nav li dd').fadeToggle();
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							}
+						});
+						
+						$('.family_site_list dt a').on('click', function(event){
+							event.stopPropagation();
+							$('.family_site_list dd').slideToggle(function() {
+								$('.family_site_list dt a').toggleClass('on');
+							});
+						});
+						$('.footer_nav > ul > li a').on('click', function(event){
+							event.stopPropagation();
+							$(this).parent('li').toggleClass('on');
+						});
+						$('.quick_menu_list a.go_top').on('click', function(event) {
+							// Animate scroll to top
+							$('.section_wrap').animate({ scrollTop: 0 }, 'smooth');
+						});
+					});
+				</script>
+			</div>
+			<!--//header-->
+
+			<!--section_wrap-->
+			<div class="section_wrap">
+				<!--product_search-->
+				<div class="section product_search">
+					<div class="section_inner">
+						<!--title-->
+						<div class="mgt43">
+							<h2 class="tit_h2">API 상품</strong></h2>
+						</div>
+						<!--//title-->
+						
+						<!--search box-->
+						<div class="search_box mgt30">
+							<div class="search_bar">
+								<input type="text" name="" id="" placeholder="상품을 찾아보세요">
+								<a href="#none" class="clear"><span class="blind">clear</span></a>
+								<a href="#none" class="btn_search"><span class="blind">Search</span></a>
+							</div>
+							<ul class="tag_list">
+								<li><a href="#none">#마이데이터</a></li>
+								<li><a href="#none">#간편결제</a></li>
+								<li><a href="#none">#인슈어테크 </a></li>
+								<li><a href="#none">#사무자동화</a></li>
+							</ul>
+						</div>
+						<!--//search box-->
+
+						<!--filter box-->
+						<div class="filter_box mgt60">
+							<label class="filter_box_switcher"><input type="checkbox"><span>열기</span><span class="close">닫기</span></label>
+							
+							<!--purpose filter-->
+							<div class="purpose_filter">
+								<!--title-->
+								<div class="title">
+									<h3><span>API가 필요한 업무/분야</span>를 선택해 주세요</h3>
+								</div>
+								<!--//title-->
+								<div class="purpose_filter_list mgt30">
+									<dl class="">
+										<dt>
+											<label><strong><input type="checkbox"></strong><span>데이터</span></label>
+										</dt>
+										<dd><a href="#none">마이데이터</a></dd>
+										<dd><a href="#none">메시지</a></dd>
+										<dd class="on"><a href="#none">자금관리</a></dd>
+										<dd><a href="#none">사업자 정보</a></dd>
+										<dd><a href="#none">서류 증빙</a></dd>
+										<dd><a href="#none">헬스케어</a></dd>
+										<dd><a href="#none">자동차</a></dd>
+										<dd><a href="#none">부동산</a></dd>
+									</dl>
+									<dl>
+										<dt>
+											<label><strong><input type="checkbox" id="purpose_filter_02"></strong><span>페이먼트</span></label>
+										</dt>
+										<dd><a href="#none">가상계좌</a></dd>
+										<dd><a href="#none">펌뱅킹<br>(이체/조회)</a></dd>
+										<dd><a href="#none">간편결제</a></dd>
+										<dd><a href="#none">인증/보안</a></dd>
+										<dd><a href="#none">ATM입출금(COATM)</a></dd>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>	
+									</dl>
+									<dl>
+										<dt>
+											<label><strong><input type="checkbox"></strong><span>글로벌</span></label>
+										</dt>
+										<dd><a href="#none">아시아</a></dd>
+										<dd><a href="#none">유럽</a></dd>
+										<dd><a href="#none">중동/아프리카</a></dd>
+										<dd><a href="#none">오세아니아</a></dd>
+										<dd><a href="#none"></a></dd>
+										<dd><a href="#none"></a></dd>
+										<dd><a href="#none"></a></dd>
+										<dd><a href="#none"></a></dd>
+									</dl>
+								</div>
+							</div>
+							<!--//purpose filter-->
+
+							<!--detail filter-->
+							<div class="detail_filter mgt30">
+								<!--title-->
+								<div class="title">
+									<h3><span>상세 필터</span>를 적용해 보세요</h3>
+								</div>
+								<!--//title-->
+								<ul class="mgt20">
+									<li>
+										<label><input type="checkbox">출러 <span>26개 선택됨</span></label>
+										<div class="detail_filter_list">
+											<dl>
+												<dt><label><input type="checkbox">금융기관 전체</label></dt>
+												<dd><label><input type="checkbox">은행</label></dd>                                                                        
+												<dd><label><input type="checkbox">증권사</label></dd>
+												<dd><label><input type="checkbox">보험사</label></dd>
+												<dd><label><input type="checkbox">카드사</label></dd>
+											</dl>
+											<dl class="mgt20">
+												<dt><label><input type="checkbox">공공기관 전체</label></dt>
+												<dd><label><input type="checkbox">건강보험공단</label></dd>
+												<dd><label><input type="checkbox">국민연금</label></dd>
+												<dd><label><input type="checkbox">홈택스</label></dd>
+												<dd><label><input type="checkbox">도로교통공단</label></dd>
+												<dd><label><input type="checkbox">정부24</label></dd>
+												<dd><label><input type="checkbox">크레딧포유</label></dd>
+												<dd><label><input type="checkbox">이파인</label></dd>
+												<dd><label><input type="checkbox">페이인포</label></dd>
+												<dd><label><input type="checkbox">경찰민원포털</label></dd>
+												<dd><label><input type="checkbox">보험개발원</label></dd>
+												<dd><label><input type="checkbox">대법원</label></dd>
+												<dd><label><input type="checkbox">공무원연금공단</label></dd>
+												<dd><label><input type="checkbox">카히스토리</label></dd>
+												<dd><label><input type="checkbox">하이코리아</label></dd>
+												<dd><label><input type="checkbox">위택스</label></dd>
+												<dd><label><input type="checkbox">사학연금관리공단</label></dd>
+												<dd><label><input type="checkbox">통합연금포털</label></dd>
+												<dd><label><input type="checkbox">인터넷등기소</label></dd>
+												<dd><label><input type="checkbox">4대사회보험</label></dd>
+												<dd><label><input type="checkbox">한국장학재단</label></dd>
+												<dd><label><input type="checkbox">군인연금</label></dd>
+												<dd><label><input type="checkbox">자동차민원</label></dd>
+												<dd><label><input type="checkbox">보험다모아</label></dd>
+												<dd><label><input type="checkbox">한국주택금융공사</label></dd>
+												<dd><label><input type="checkbox">펀드다모아</label></dd>
+												<dd><label><input type="checkbox">관세청</label></dd>
+												<dd><label><input type="checkbox">금결원</label></dd>
+												<dd><label><input type="checkbox">세움터</label></dd>
+												<dd><label><input type="checkbox">서울보증보험</label></dd>
+												<dd><label><input type="checkbox">교통민원24</label></dd>
+												<dd><label><input type="checkbox">보험개발원</label></dd>
+												<dd><label><input type="checkbox">근로복지공단</label></dd>
+												<dd><label><input type="checkbox">식품안전나라</label></dd>
+												<dd><label><input type="checkbox">질병관리청</label></dd>
+												<dd><label><input type="checkbox">인터넷지로</label></dd>
+												<dd><label><input type="checkbox">하이패스</label></dd>
+												<dd><label><input type="checkbox">렌트홈</label></dd>
+												<dd><label><input type="checkbox">청약홈</label></dd>
+												<dd><label><input type="checkbox">큐넷</label></dd>
+												<dd><label><input type="checkbox">고용산재보험</label></dd>
+												<dd><label><input type="checkbox">복지로</label></dd>
+												<dd><label><input type="checkbox">건강보험심사평건강보험심사평</label></dd>
+												<dd><label><input type="checkbox">건강보험심사평건강보험심사평</label></dd>
+												<dd><label><input type="checkbox">건강보험심사평건강보험심사평</label></dd>
+												<dd><label><input type="checkbox">건강보험심사평건강보험심사평</label></dd>
+											</dl>
+											<dl class="mgt20">
+												<dt><label><input type="checkbox">민간기업 전체</label></dt>
+											</dl>
+											<div class="btn_wrap mgt20">
+												<a href="#none" class="btn_white">선택 초기화</a>
+												<a href="#none" class="btn_blue">상품 보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<label>적용대상 <span>1개 선택됨</span><input type="checkbox"></label>
+										<div class="detail_filter_list">
+											<dl>
+												<dt><label><input type="checkbox">적용대상</label></dt>
+												<dd><label><input type="checkbox">대출심사</label></dd>
+												<dd><label><input type="checkbox">법인카드연동</label></dd>
+												<dd><label><input type="checkbox">서류증빙</label></dd>
+												<dd><label><input type="checkbox">사무자동화</label></dd>
+												<dd><label><input type="checkbox">자금정산</label></dd>
+												<dd><label><input type="checkbox">전자서명</label></dd>
+												<dd><label><input type="checkbox">회원가입</label></dd>
+												<dd><label><input type="checkbox">ERP</label></dd>
+												<dd><label><input type="checkbox">쇼핑몰</label></dd>
+												<dd><label><input type="checkbox">렌탈서비스</label></dd>
+												<dd><label><input type="checkbox">앱서비스</label></dd>
+											</dl>
+											<div class="btn_wrap mgt20">
+												<a href="#none" class="btn_white">선택 초기화</a>
+												<a href="#none" class="btn_blue">상품 보기</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--//detail filter-->
+
+							<!--filter reseter-->
+							<a href="#none" class="filter_reseter">선택 초기화</a>
+							<!--//filter reset-->
+						</div>
+						<!--//filter box-->
+					</div>
+				</div>
+				<!--//product_search-->
+
+				<!--product search result-->
+				<div class="section product_search_result">
+					<div class="section_inner">
+						<!--result summary-->
+						<div class="result_sum">
+							<p><span>김산</span> 검색결과 <span class="mgl8">98</span>건</p>
+							<ul class="sort">
+								<li class="on"><a href="#none">추천순</a></li>
+								<li><a href="#none">최근 조회순</a></li>
+								<li><a href="#none">인기순</a></li>
+								<li><a href="#none">신규순</a></li>
+							</ul>
+						</div>
+						<!--//result summary-->
+						<!--product list-->
+						<div class="product_list mgt34">
+							<ul class="product_data_api">
+								<li class="bg_E3F7FF">
+									<div class="mgt15">
+										<strong>
+										금융거래 적요정보<br>
+										자동분류 서비스
+										</strong>
+										<p class="mgt15">
+											소유차량의 저공해차 정보와<br>
+											배출가스 등급 조회
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_01"><input type="checkbox" id="mark_01"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+								<li class="bg_E7FCF3">
+									<div class="mgt15">
+										<strong>
+											We-Check<br>
+											(모바일 증명서 조회)
+										</strong>
+										<p  class="mgt15">
+											대출심사, 자격확인에 필요한 증빙서류<br>
+											발급·제출 과정을 Plug-In 연동으로 해결
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_02"><input type="checkbox" id="mark_02"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+								<li class="bg_ECEAFF">
+									<div class="mgt15">
+										<strong>신분증 진위 확인</strong>
+										<p class="mgt15">
+											다양한 신분증의 진위여부를 진위여부<br>
+											비대면으로 실시간 확인
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_03"><input type="checkbox" id="mark_03"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--//product list-->
+
+						<!--product list-->
+						<div class="product_list mgt24">
+							<ul>
+								<li>
+									<div>
+										<span class="badge new">NEW</span>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_03.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge new">NEW</span>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_03.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge new">NEW</span>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_03.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge new">NEW</span>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_03.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge update">UPDATE</span>
+										<strong class="mgt18">건강분석 정보 조회</strong>
+										<p>
+											개인별 건강 분석 결과와 건강관리<br>
+											가이드 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_04.png" alt="">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_04.png" alt="">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_04.png" alt="">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_04.png" alt="">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge hot">HOT</span>
+										<strong class="mgt18">전국 부동산 투자정보 조회</strong>
+										<p>
+											부동산 투자에 필요한 시세와 관련<br>
+											부대비용 조회
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--//product list-->
+
+						<!--pagination-->
+						<div class="pagination mgt48">
+							<a href="#none" class="previous"><span class="blind">Previous</span></a>
+							<ol>
+								<li class="on"><a href="#none">1</a></li>
+								<li><a href="#none">2</a></li>
+								<li><a href="#none">3</a></li>
+								<li><a href="#none">4</a></li>
+								<li><a href="#none">5</a></li>
+								<li><a href="#none">6</a></li>
+								<li><a href="#none">7</a></li>
+								<li><a href="#none">8</a></li>
+								<li><a href="#none">9</a></li>
+								<li><a href="#none">10</a></li>
+							</ol>
+							<a href="#none" class="next"><span class="blind">Next</span></a>
+						</div>
+						<!--//pagination-->
+
+						<!--no result-->
+						<div class="no_result">
+							<span></span>
+							<strong class="mgt20">검색 결과가 없어요</strong>
+							<p>검색어를 확인하고 다시 검색해 보세요.</p>
+						</div>
+						<!--//no result-->
+
+						<!--recommendation banner-->
+						<div class="recommendation_banner">
+							<p><span>“은행”</span> 검색결과 <span>빅데이터 상품 2건</span> 있어요</p>
+							<a href="#none" class="btn_blue_01 mgl23">쿠콘에 문의하기</a>
+						</div>
+						<!--//recommendation banner-->
+					</div>
+				</div>
+				<!--//product search result-->
+
+				<!--more info-->
+				<div class="more_info pdt90">
+					<div class="section_inner">
+						<!--option-->
+						<div class="info_option mgt50 mgb90">
+							<ul>
+								<li class="new_product_request">
+									<dl>
+										<dt>
+											<img src="../img/im/im_list_banner_04.png" alt="">
+										</dt>
+										<dd>
+											<strong>뉴스룸</strong>
+											<p>국내 최대 비즈니스 데이터 플랫폼 쿠콘의 다양한 이야기를 만나보세요</p>
+											<a href="">문의하기</a>
+										</dd>
+									</dl>
+								</li>
+								<li class="inquire">
+									<dl>
+										<dt>
+											<img src="../img/im/im_list_banner_02.png" alt="">
+										</dt>
+										<dd>
+											<strong>제휴 문의</strong>
+											<p>귀사의 빅데이터 상품 판매를 쿠콘이 지원할게요</p>
+											<a href="">문의하기</a>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--//option-->
+					</div>
+					<div class="method_suggest pdb100">
+						<!--title-->
+						<div class="tit_wrap">
+							<h2 class="tit_h2">다른 기업들은 이렇게 활용하고 있어요</h2>
+						</div>
+						<!--//title-->
+
+						<!--card list-->
+						<div class="card_list mgt40">
+							<ul>
+								<li>
+									<span class="label interview">고객인터뷰</span>
+									<img src="../img/logo/im_logo_thumb.png" alt="">
+									<h4 class="new">당근페이당근페이당근페이당근페이당근페이</h4>
+									<p>계좌 간편결제 API를 활용한 중고거래간편송금 서비스중고거래간편송금 서비스중고거래간편송금 서비스중고거래간편송금 서비스</p>
+								</li>
+								<li>
+									<span class="label">활용사례</span>
+									<img src="../img/logo/im_logo_thumb.png" alt="">
+									<h4 class="">핀크</h4>
+									<p>국내 최고 기술력의 스크래핑, 금융 VAN, 오픈 API HUB를 통해 전 세계 데이터</p>
+								</li>
+								<li>
+									<span class="label">활용사례</span>
+									<img src="../img/logo/im_logo_thumb.png" alt="">
+									<h4 class="">KIS정보통신</h4>
+									<p>지급결제 API를 활용한 간편 충전, 가맹점 정산 간소화</p>
+								</li>
+								<li>
+									<span class="label">활용사례</span>
+									<img src="../img/logo/im_logo_thumb.png" alt="">
+									<h4 class="">하나카드</h4>
+									<p>COATM API를 활용한 하나머니 스마트 출금서비스</p>
+								</li>
+							</ul>
+						</div>
+						<!--//card list-->
+					</div>
+					<div class="inquire_link">
+						<div>
+							<img src="../img/ic/ic_con.png" alt=""><p class="mgl30">문의사항을 남겨주시면 <span>쿠콘 컨설턴트</span>가 <span>직접 답변</span> 드립니다.</p><a href="#none" class="btn_blue_01 mgl23">쿠콘에 문의하기</a>
+						</div>
+					</div>
+				</div>
+				<!--//more info-->
+
+				<!--footer-->
+				<div class="footer">
+					<div class="footer_inner">
+						<div class="footer_left mgt30">
+							<div class="footer_nav">
+								<ul>
+									<li>
+										<a href="#none">서비스 이용약관<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 이용약관</a></li>
+											<li><a href="#none">체크페이 이용약관</a></li>
+											<li><a href="#none">간편결제 서비스 이용약관</a></li>
+											<li><a href="#none">전자금융거래 이용약관</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#none" class="strong">개인정보처리방침<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 개인정보처리방침</a></li>
+											<li><a href="#none">체크페이 개인정보처리방침</a></li>
+											<li><a href="#none">간편결제서비스 개인정보처리방침</a></li>
+											<li><a href="#none">전자금융거래 개인정보처리방침</a></li>
+											<li><a href="#none">내게맞는대출비교 개인정보처리방침</a></li>
+											<li><a href="#none">We-Chceck 개인정보처리방침</a></li>
+										</ul>
+									</li>
+									<li><a href="#none">금융소비자 보호체계</a></li>
+									<li><a href="#none">기업윤리</a></li>
+								</ul>
+							</div>
+							<div class="copyright mgt40">
+								<dl class="contact_list">
+									<dt>T.</dt>
+									<dd>1522-1904</dd>
+									<dt>T.</dt>
+									<dd>02-3779-9199</dd>
+									<dt>E.</dt>
+									<dd>biz@coocon.net</dd>
+								</dl>
+								<ul class="address">
+									<li>(주)쿠콘</li>
+									<li>대표자 : 김종현</li>
+									<li>사업자등록번호 : 107-86-85702</li>
+									<li>서울특별시 영등포구 영신로 220 KnK디지털타워 19층</li>
+								</ul>
+								<p>본 사이트의 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복사, 배포 등을 금합니다. <span>© COOCON Corp. All rights reserved</span></p>
+							</div>
+						</div>
+						<div class="footer_right mgt40">
+							<div class="site_link">
+								<a href="#none" class="blog"><img src="../img/ic/ic_blog.png" alt=""></a>
+								<dl class="family_site_list">
+									<dt><a href="#none">Family Site</a></dt>
+									<dd style="display: none;">
+										<ul>
+											<li><a href="#none">(주)쿠콘</a></li>
+											<li><a href="#none">쿠콘 데이터전문기관</a></li>
+											<li><a href="#none">체크페이</a></li>
+											<li><a href="#none">내게 맞는 대출비교</a></li>
+										</ul>
+										<ul>
+											<li><a href="#none">(주)웹케시</a></li>
+											<li><a href="#none">(주)웹케시글로벌</a></li>
+											<li><a href="#none">(주)비즈플레이</a></li>
+											<li><a href="#none">(주)비플페이</a></li>
+											<li><a href="#none">마드라스체크(주)</a></li>
+											<li><a href="#none">로움아이티(주)</a></li>
+											<li><a href="#none">KOSIGN</a></li>
+											<li><a href="#none">웹케시제뉴윈</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<dl class="isms mgt60">
+								<dt><img src="../img/comm/authMark_ISMS.png" alt=""></dt>
+								<dd>
+									<p>
+										인증범위 체크페이 및 쿠콘닷넷 서비스<br>
+										유효기간 2020.12.01 ~ 2023.11.30
+									</p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--//footer-->
+				
+				<!--quick menu-->
+				<ul class="quick_menu_list">
+					<li><a href="#none" class="history">히스토리</a></li>
+					<li><a href="#none" class="ask">간편문의</a></li>
+					<li><a href="#none" class="go_top" style="display:none"><span class="blind">Go to Top</span></a></li>
+				</ul>
+				<!--//quick menu-->
+			</div>
+			<!--//section_wrap-->	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>쿠콘닷넷</title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no">
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href="../img/favicon.ico">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/content.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>	
+	<body>
+		<div class="wrap">
+			<!--header-->
+			<div class="header">
+				<div class="header_inner">
+					<div class="header_left">
+						<h1><a href="#none"><img src="../img/comm/logo.png" alt="coocon"></a></h1>
+						<ul class="nav">
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>상품</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>API 상품</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>빅데이터 상품</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>고객사례</span></label></a></dt>
+									<dd><a href="#none"><label for="nav_switch"><span>고객 인터뷰</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>활용사례</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품 가입현황</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>쿠콘소식</span></label></a></dt>
+									<dd class=""><a href="#none"><label for="nav_switch"><span>공지사항</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>상품소식</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>뉴스룸</span></label></a></dd>
+									<dd><a href="#none" target="_blank"><label for="nav_switch"><span>회사소개</span></label></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#none"><label for="nav_switch"><span>고객지원</span></label></a></dt>
+									<dd class="blue_dot"><a href="#none"><label for="nav_switch"><span>고객문의</span></label></a></dd>
+									<dd><a href="#none"><label for="nav_switch"><span>FAQ</span></label></a></dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<ul class="right_list">
+						<li><a href="#none">RECRUIT</a></li>
+						<li><a href="#none">ENG</a></li>
+					</ul>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$(document).click(function(){
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							} else {
+								$header.removeClass('active');
+							}
+							$('.nav li dd').fadeOut();
+							$('.footer_nav > ul > li').removeClass('on');
+							$('.family_site_list dd').fadeOut(function() {
+								$('.family_site_list dt a').removeClass('on');
+							});
+						});
+						const $sectionWrap = $('.section_wrap');
+						const $header = $('.header');// Reference to the checkbox
+						const scrollOffset = 83; // Distance in pixels to trigger the class toggle
+
+						// Function to toggle the 'active' class based on scroll position within section_wrap
+						function toggleScrolledClass() {
+							
+
+							// Otherwise, toggle the 'active' class based on scroll position
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+								$('.quick_menu_list a.go_top').fadeIn()
+							} else {
+								$header.removeClass('active');
+								$('.quick_menu_list a.go_top').fadeOut()
+							}
+						}
+
+						// Initialize the state on page load
+						toggleScrolledClass();
+
+						// Attach scroll event listener to section_wrap
+						$sectionWrap.on('scroll', function() {
+							toggleScrolledClass();
+						});
+
+						$('.nav li dt').on('click', function(event){
+							event.stopPropagation();
+							$header.toggleClass('active');
+							$('.nav li dd').fadeToggle();
+							if ($sectionWrap.scrollTop() > scrollOffset) {
+								$header.addClass('active');
+							}
+						});
+						
+						$('.family_site_list dt a').on('click', function(event){
+							event.stopPropagation();
+							$('.family_site_list dd').slideToggle(function() {
+								$('.family_site_list dt a').toggleClass('on');
+							});
+						});
+						$('.footer_nav > ul > li a').on('click', function(event){
+							event.stopPropagation();
+							$(this).parent('li').toggleClass('on');
+						});
+						$('.quick_menu_list a.go_top').on('click', function(event) {
+							// Animate scroll to top
+							$('.section_wrap').animate({ scrollTop: 0 }, 'smooth');
+						});
+					});
+				</script>
+			</div>
+			<!--//header-->
+
+			<!--section_wrap-->
+			<div class="section_wrap">
+				<!--section_01-->
+				<div class="section_01">
+					<div class="section_inner">
+						<!--title-->
+						<div class="mgt43">
+							<h2 class="tit_h2">쿠콘을 만나면 <strong>비즈니스가 성공합니다</strong></h2>
+						</div>
+						<!--//title-->
+						
+						<!--search box-->
+						<div class="search_box mgt12">
+							<div class="search_bar">
+								<input type="text" name="" id=""><a href="#none">Search</a>
+							</div>
+							<ul class="tag_list mgt20">
+								<li><a href="#none"># 빅테크</a></li>
+								<li><a href="#none"># 업무자동화</a></li>
+								<li><a href="#none"># 법인카드EDI</a></li>
+								<li><a href="#none"># 간편인증</a></li>
+							</ul>
+						</div>
+						<!--//search box-->
+
+						<!--feature list-->
+						<div class="features mgt70">
+							<img src="../img/main/mn_api_logo_coocon.png" alt="">
+							<dl class="data_api">
+								<dt>데이터API<em>156</em></dt>
+								<dd>
+									<p>시장을 선도하는 서비스와 내부 업무 자동화에 필요한 모든 API</p>
+									<ul class="mgt15">
+										<li><a href="#none">마이데이<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">메시지<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">자금관리<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">사업자정보<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">서류증빙<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">헬스케어<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">자동차<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">부동산<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="payment_api">
+								<dt>페이먼트API<em>21</em></dt>
+								<dd>
+									<p>자동화된 수납 시스템, 간편결제 서비스 구축에 필요한 모든 API</p>
+									<ul class="mgt15">
+										<li><a href="#none">가상계좌<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">펌뱅킹(이체/조회)<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">간편결제<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">인증/보안<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">ATM입출금(COATM)<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="big_data">
+								<dt>빅데이터<em>17</em></dt>
+								<dd>
+									<p>상권 분석, 금상품 추천 등 고도화된 비즈니스 절략에 필요한 빅데이터</p>
+									<ul class="mgt15">
+										<li><a href="#none">사업자 빅데이터<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">부동산 빅데이터<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">금융 빅데이터<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">자동차 빅데이터<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="global_api">
+								<dt>글로벌API<em>87</em></dt>
+								<dd>
+									<p>40여 개 이상의 전세계 비즈니스 데이터를 수집한 국내 유일 글로벌</p>
+									<ul class="mgt15">
+										<li><a href="#none">아시아<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">유럽<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">중동/아프리카<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">아메리카<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+										<li><a href="#none">오세아니아<img src="../img/ic/ic_arr_w.png" alt=""></a></li>
+									</ul>
+								</dd>
+							</dl>						
+						</div>
+						<!--//feature list-->
+					</div>
+				</div>
+				<!--//section_01-->
+
+				<!--section_02-->
+				<div class="section_02 pdb90">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap mgt100 "><h2 class="tit_h2">지금 가장 HOT한 API 상품</h2></div>
+						<!--//title-->
+
+						<!--category-->
+						<ul class="category_list mgt30">
+							<li><a href="#none" class="active">데이터API </a></li>
+							<li><a href="#none">페이먼트API</a></li>
+							<li><a href="#none">글로벌API</a></li>
+						</ul>
+						<!--//category-->
+
+						<!--product list-->
+						<div class="product_list slide_01 mgt50">
+							<a href="#none" class="slide_left off"><span class="blind"></span></a>
+							<ul class="product_data_api">
+								<li class="bg_E3F7FF">
+									<div class="mgt15">
+										<strong>
+										금융거래 적요정보<br>
+										자동분류 서비스
+										</strong>
+										<p class="mgt15">
+											소유차량의 저공해차 정보와<br>
+											배출가스 등급 조회
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_01"><input type="checkbox" id="mark_01"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+								<li class="bg_E7FCF3">
+									<div class="mgt15">
+										<strong>
+											We-Check<br>
+											(모바일 증명서 조회)
+										</strong>
+										<p  class="mgt15">
+											대출심사, 자격확인에 필요한 증빙서류<br>
+											발급·제출 과정을 Plug-In 연동으로 해결
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_02"><input type="checkbox" id="mark_02"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+								<li class="bg_ECEAFF">
+									<div class="mgt15">
+										<strong>신분증 진위 확인</strong>
+										<p class="mgt15">
+											다양한 신분증의 진위여부를 진위여부<br>
+											비대면으로 실시간 확인
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+										<label for="mark_03"><input type="checkbox" id="mark_03"><span class="blind">북마크</span></label>
+									</div>
+								</li>
+							</ul>
+							<a href="#none" class="slide_right"><span class="blind"></span></a>
+						</div>
+						<!--//product list-->
+
+						<!--title-->
+						<div class="tit_wrap mgt100"><h2 class="tit_h2">지금 가장 HOT한 API 상품</h2></div>
+						<!--//title-->
+
+						<!--product list-->
+						<div class="product_list slide_01 mgt50">
+							<a href="#none" class="slide_left"><span class="blind"></span></a>
+							<ul>
+								<li>
+									<div>
+										<span class="badge new">NEW</span>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+											<img src="../img/ic/ic_service_03.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge update">UPDATE</span>
+										<strong class="mgt18">건강분석 정보 조회</strong>
+										<p>
+											개인별 건강 분석 결과와 건강관리<br>
+											가이드 제공
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_04.png" alt="">
+											<img src="../img/ic/ic_service_01.png" alt="">
+											<img src="../img/ic/ic_service_02.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge hot">HOT</span>
+										<strong class="mgt18">전국 부동산 투자정보 조회</strong>
+										<p>
+											부동산 투자에 필요한 시세와 관련<br>
+											부대비용 조회
+										</p>
+										<div class="tag_sign">
+											<img src="../img/ic/ic_service_01.png" alt="">
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+							</ul>
+							<a href="#none" class="slide_right"><span class="blind"></span></a>
+						</div>
+						<!--//product list-->
+
+						<!--title-->
+						<div class="tit_wrap mgt100"><h2 class="tit_h2">따끈한 신상 , 빠르게 도입하세요</h2></div>
+						<!--//title-->
+
+						<!--product list-->
+						<div class="product_list slide_01 mgt50">
+							<a href="#none" class="slide_left"><span class="blind"></span></a>
+							<ul>
+								<li>
+									<div>
+										<strong class="mgt18">1가상자산 조회</strong>
+										<p>
+											자상가산 거래소에 보유한 자산현황,<br>
+											거래내역 제공
+										</p>
+										<div class="tag_sign">
+											<a href="#none"><img src="" alt=""></a>
+											<a href="#none"><img src="" alt=""></a>
+											<a href="#none"><img src="" alt=""></a>
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<strong class="mgt18">건강분석 정보 조회</strong>
+										<p>
+											개인별 건강 분석 결과와 건강관리<br>
+											가이드 제공
+										</p>
+										<div class="tag_sign">
+											<a href="#none"><img src="" alt=""></a>
+											<a href="#none"><img src="" alt=""></a>
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span class="badge hot">HOT</span>
+										<strong class="mgt18">전국 부동산 투자정보 조회</strong>
+										<p>
+											부동산 투자에 필요한 시세와 관련<br>
+											부대비용 조회
+										</p>
+										<div class="tag_sign">
+											<a href="#none"><img src="" alt=""></a>
+										</div>
+										<label><input type="checkbox"></label>
+									</div>
+								</li>
+							</ul>
+							<a href="#none" class="slide_right"><span class="blind"></span></a>
+						</div>
+						<!--//product list-->
+					</div>
+				</div>
+				<!--//section_02-->
+
+				<!--section_03-->
+				<div class="section_03 bg_f5f7f8">
+					<div class="section_inner pdt90 pdb90">
+						<!--title-->
+						<div class="tit_wrap"><h2 class="tit_h2">쿠콘과 함께한 고객 이야기를 확인해보세요</h2></div>
+						<!--//title-->
+
+						<!--link_wrap_01-->
+						<div class="link_wrap_01 mgt15">
+							<a href="#none">고객인터뷰 더보기</a>
+						</div>
+						<!--//link_wrap_01-->
+
+						<!--interview list-->
+						<div class="interview_list mgt24">
+							<ul>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+								<li>
+									<img src="../img/interview/im_interview_thumb.png" alt="">
+									<h3><img src="../img/logo/im_logo_thumb.png" alt=""><span class="num">60</span></h3>
+									<strong>선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘선불요금 충전, 요금 수납에 쿠콘</strong>
+									<p>
+										쿠콘 덕분에 다수의 금융기관도 부담 없이 업무를 진행할 것 같습니다.
+									</p>
+								</li>
+							</ul>
+						</div>
+						<!--//interview list-->
+					</div>
+				</div>
+				<!--//section_03-->
+
+				<!--section_04-->
+				<div class="section_04 pdt90 pdb90">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap"><h2 class="tit_h2">데이터 활용 방법을 찾고 계신가요?</h2></div>
+						<!--//title-->
+
+						<!--link_wrap_01-->
+						<div class="link_wrap_01 mgt15">
+							<a href="#none">활용사례 더보기</a>
+						</div>
+						<!--//link_wrap_01-->
+						
+						<!--implementation-->
+						<div class="product_list implementation mgt24">
+							<ul>
+								<li class="method_01">
+									<div>
+										<strong>자동차 배출가스 정보 조회</strong>
+										<p>
+											소유차량의 저공해차 정보와 배출가스<br>
+											등급 조회
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+								<li class="method_02">
+									<div>
+										<strong>마이데이터 Plug-In</strong>
+										<p>
+											Plug-In 상품 연동으로 통합 자산관리<br>
+											서비스 손쉽게 제공
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+								<li class="method_03">
+									<div>
+										<strong>신분증 진위 확인</strong>
+										<p>
+											다양한 신분증의 진위여부를 비대면으로<br>
+											실시간 확인
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+								<li class="method_01">
+									<div>
+										<strong>자동차 배출가스 정보 조회</strong>
+										<p>
+											소유차량의 저공해차 정보와 배출가스<br>
+											등급 조회
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+								<li  class="method_02">
+									<div>
+										<strong>마이데이터 Plug-In</strong>
+										<p>
+											Plug-In 상품 연동으로 통합 자산관리<br>
+											서비스 손쉽게 제공
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+								<li class="method_03">
+									<div>
+										<strong>신분증 진위 확인</strong>
+										<p>
+											다양한 신분증의 진위여부를 비대면으로<br>
+											실시간 확인
+										</p>
+										<a href="#none" class="see_detail mgt20">자세히보기</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--//implementation-->
+					</div>
+				</div>
+				<!--//section_04-->
+
+				<!--section_05-->
+				<div class="section_05 pdt90 pdb90 bg_f5f7f8">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap"><h2 class="tit_h2">데이터 활용 방법을 찾고 계신가요?</h2></div>
+						<!--//title-->
+
+						<!--pros-->
+						<div class="pros_list mgt70">
+							<ul>
+								<li>
+									<img src="../img/im/im_listBx_customer_01.png" alt="">
+									<strong>데이터 수집</strong>
+									<p>
+										국내외 2,5000여개 기관에서<br>
+										50,000여개 데이터를<br>
+										수집하는 국내 유일 기업
+									</p>
+								</li>
+								<li>
+									<img src="../img/im/im_listBx_customer_02.png" alt="">
+									<strong>데이터 연결</strong>
+									<p>
+										국내 최고 기술력의 스크래핑,<br>
+										금융 VAN, 오픈 API HUB를 통해<br>
+										전 세계 데이터 연결
+									</p>
+								</li>
+								<li>
+									<img src="../img/im/im_listBx_customer_03.png" alt="">
+									<strong>금융보안센터</strong>
+									<p>
+										20명 이상의 전문 인력으로<br>
+										24 / 7 / 365 운영되는<br>
+										대형 금융기관 수준의 안정성
+									</p>
+								</li>
+								<li>
+									<img src="../img/im/im_listBx_customer_04.png" alt="">
+									<strong>지식재산권</strong>
+									<p>
+										데이터 수집·연결에 15년 이상<br>
+										집중하여 높은 기술 진입장벽 구축
+									</p>
+								</li>
+							</ul>
+						</div>
+						<!--//pros-->
+					</div>
+				</div>
+				<!--//section_05-->
+
+				<!--section_06-->
+				<div class="section_06">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap">
+							<h2 class="tit_h2">데이터 활용 방법을 찾고 계신가요?</h2>
+							<p class="mgt15">“200+ <span>금융기관</span>” “200+ <span>빅테크/핀테크</span>” “1,400+ <span>공공/일반기업</span>”</p>
+						</div>
+						<!--//title-->
+
+						<!--client list-->
+						<div class="client_list mgt40">
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+							<div class="row">
+								<ul>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+									<li><img src="../img/logo_main/im_logo_001.png" alt=""></li>
+								</ul>
+							</div>
+						</div>
+						<!--//client list-->
+					</div>
+				</div>
+				<!--//section_06-->
+
+				<!--section_07-->
+				<div class="section_07 pdt90 pdb90 bg_f5f7f8">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap">
+							<h2 class="tit_h2">다양한 쿠콘 소식들을 만나보세요</h2>
+						</div>
+						<!--//title-->
+
+						<!--filter list-->
+						<ul class="filter_list mgt20">
+							<li><a href="#none" class="on">고객문의<em class="new"><span class="blind">New</span></em></a></li>
+							<li><a href="#none">공지사항</a></li>
+							<li><a href="#none">상품소식</a></li>
+							<li><a href="#none">가입현황<em class="new"><span class="blind">New</span></em></a></li>
+						</ul>
+						<!--//filter list-->
+						
+						<!--news -->
+						<div class="news mgt30">
+							<div class="news_sum">
+								<h3>
+									쿠콘의 전문가가 빠르게<br>
+									<strong>견적과 답변</strong>을 전달드려요
+								</h3>
+								<a href="#none" class="ask_link">고객문의 더보기</a>
+								<ul class="news_sum_list">
+									<li class="blue">최근 7일간 <span>39</span>개 답변이 등록되었어요</li>
+									<li class="purple">최근 7일간 <span>40</span>개 질문이 등록되었어요</li>
+								</ul>
+							</div>
+							<div class="news_list">
+								<ul>
+									<li>
+										<div>
+											<span class="new">NEW</span>
+											<strong>월 1~2천건 정도 사용 예정입니다. 결제대행사이며 관리자페이지 ID/PX 관일 이삼사오육칠팔구십일이삼사오육칠팔구이삼사오육칠팔구십일이삼사오육칠팔구</strong>
+											<div class="info">
+												<span>1시간 전</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<span class="new">NEW</span>
+											<strong>Plug-In 상품 연동으로 통합 자산관리 서비스 손쉽게 제공</strong>
+											<div class="info">
+												<span>3시간 전</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<strong>다양한 신분증의 진위여부를 비대면으로 실시간 확인</strong>
+											<div class="info">
+												<span>17시간 전</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<strong>월 1~2천건 정도 사용 예정입니다. 결제대행사이며 관리자페이지 ID/PX 관</strong>
+											<div class="info">
+												<span>어제</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<strong>Plug-In 상품 연동으로 통합 자산관리 서비스 손쉽게 제공</strong>
+											<div class="info">
+												<span>어제</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<strong>다양한 신분증의 진위여부를 비대면으로 실시간 확인</strong>
+											<div class="info">
+												<span>2023.06.01</span>
+												<a href="#none">자세히보기</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--//news-->
+					</div>
+				</div>
+				<!--//section_07-->
+				
+				<!--more info-->
+				<div class="more_info pdt90">
+					<div class="section_inner">
+						<!--title-->
+						<div class="tit_wrap">
+							<h2 class="tit_h2"><strong>쿠콘이 더 궁금하신가요?</strong></h2>
+						</div>
+						<!--//title-->
+						
+						<!--option-->
+						<div class="info_option mgt50 mgb90">
+							<ul>
+								<li class="newsroom">
+									<dl>
+										<dt>
+											<img src="../img/im/im_list_banner_01.png" alt="">
+										</dt>
+										<dd>
+											<strong>뉴스룸</strong>
+											<p>국내 최대 비즈니스 데이터 플랫폼 쿠콘의 다양한 이야기를 만나보세요</p>
+											<a href="">문의하기</a>
+										</dd>
+									</dl>
+								</li>
+								<li class="inquire">
+									<dl>
+										<dt>
+											<img src="../img/im/im_list_banner_02.png" alt="">
+										</dt>
+										<dd>
+											<strong>제휴 문의</strong>
+											<p>귀사의 빅데이터 상품 판매를 쿠콘이 지원할게요</p>
+											<a href="">문의하기</a>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--//option-->
+					</div>
+					<div class="inquire_link">
+						<div>
+							<img src="../img/ic/ic_con.png" alt=""><p class="mgl30">문의사항을 남겨주시면 <span>쿠콘 컨설턴트</span>가 <span>직접 답변</span> 드립니다.</p><a href="#none" class="btn_blue_01 mgl23">쿠콘에 문의하기</a>
+						</div>
+					</div>
+				</div>
+				<!--//more info-->
+
+				<!--footer-->
+				<div class="footer">
+					<div class="footer_inner">
+						<div class="footer_left mgt30">
+							<div class="footer_nav">
+								<ul>
+									<li>
+										<a href="#none">서비스 이용약관<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 이용약관</a></li>
+											<li><a href="#none">체크페이 이용약관</a></li>
+											<li><a href="#none">간편결제 서비스 이용약관</a></li>
+											<li><a href="#none">전자금융거래 이용약관</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#none" class="strong">개인정보처리방침<span></span></a>
+										<ul class="footer_sub_nav">
+											<li><a href="#none">쿠콘닷넷 개인정보처리방침</a></li>
+											<li><a href="#none">체크페이 개인정보처리방침</a></li>
+											<li><a href="#none">간편결제서비스 개인정보처리방침</a></li>
+											<li><a href="#none">전자금융거래 개인정보처리방침</a></li>
+											<li><a href="#none">내게맞는대출비교 개인정보처리방침</a></li>
+											<li><a href="#none">We-Chceck 개인정보처리방침</a></li>
+										</ul>
+									</li>
+									<li><a href="#none">금융소비자 보호체계</a></li>
+									<li><a href="#none">기업윤리</a></li>
+								</ul>
+							</div>
+							<div class="copyright mgt40">
+								<dl class="contact_list">
+									<dt>T.</dt>
+									<dd>1522-1904</dd>
+									<dt>T.</dt>
+									<dd>02-3779-9199</dd>
+									<dt>E.</dt>
+									<dd>biz@coocon.net</dd>
+								</dl>
+								<ul class="address">
+									<li>(주)쿠콘</li>
+									<li>대표자 : 김종현</li>
+									<li>사업자등록번호 : 107-86-85702</li>
+									<li>서울특별시 영등포구 영신로 220 KnK디지털타워 19층</li>
+								</ul>
+								<p>본 사이트의 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복사, 배포 등을 금합니다. <span>© COOCON Corp. All rights reserved</span></p>
+							</div>
+						</div>
+						<div class="footer_right mgt40">
+							<div class="site_link">
+								<a href="#none" class="blog"><img src="../img/ic/ic_blog.png" alt=""></a>
+								<dl class="family_site_list">
+									<dt><a href="#none">Family Site</a></dt>
+									<dd style="display: none;">
+										<ul>
+											<li><a href="#none">(주)쿠콘</a></li>
+											<li><a href="#none">쿠콘 데이터전문기관</a></li>
+											<li><a href="#none">체크페이</a></li>
+											<li><a href="#none">내게 맞는 대출비교</a></li>
+										</ul>
+										<ul>
+											<li><a href="#none">(주)웹케시</a></li>
+											<li><a href="#none">(주)웹케시글로벌</a></li>
+											<li><a href="#none">(주)비즈플레이</a></li>
+											<li><a href="#none">(주)비플페이</a></li>
+											<li><a href="#none">마드라스체크(주)</a></li>
+											<li><a href="#none">로움아이티(주)</a></li>
+											<li><a href="#none">KOSIGN</a></li>
+											<li><a href="#none">웹케시제뉴윈</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<dl class="isms mgt60">
+								<dt><img src="../img/comm/authMark_ISMS.png" alt=""></dt>
+								<dd>
+									<p>
+										인증범위 체크페이 및 쿠콘닷넷 서비스<br>
+										유효기간 2020.12.01 ~ 2023.11.30
+									</p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--//footer-->
+				
+				<!--quick menu-->
+				<ul class="quick_menu_list">
+					<li><a href="#none" class="history">히스토리</a></li>
+					<li><a href="#none" class="ask">간편문의</a></li>
+					<li><a href="#none" class="go_top" style="display:none"><span class="blind">Go to Top</span></a></li>
+				</ul>
+				<!--//quick menu-->
+			</div>
+			<!--//section_wrap-->	
+		</div>
+	</body>
+</html>
